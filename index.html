@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>QR CONCIERGE — Hotel QR Services</title>
+  <meta name="description" content="QR Concierge: QR code-activated hotel services platform for housekeeping, F&B, maintenance, front desk, navigation, and feedback." />
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:16px;">
+      <div class="brand">
+        <div class="logo">QR</div>
+        <div class="title">QR CONCIERGE</div>
+      </div>
+      <nav>
+        <a href="/index.html">Home</a>
+        <a href="/guest.html">Guest App</a>
+        <a href="/dashboard.html">Dashboard</a>
+        <a href="/qr.html">QR Generator</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Elevate your guest experience</h1>
+      <p>QR CONCIERGE is a QR code-activated platform that streamlines hotel services — housekeeping, food & beverages, maintenance, front desk, navigation, and feedback.</p>
+      <div style="display:flex;justify-content:center;gap:10px;flex-wrap:wrap;">
+        <a class="btn primary" href="/guest.html">Open Guest App</a>
+        <a class="btn ghost" href="/qr.html">Generate QR Codes</a>
+      </div>
+    </section>
+
+    <section class="section grid">
+      <div class="col-12">
+        <div class="card">
+          <h2>Executive Summary</h2>
+          <p class="desc">The "QR Concierge" system represents a cutting-edge digital solution designed to elevate the guest experience in hotels by providing an intuitive, QR code-activated platform for accessing a comprehensive suite of services.</p>
+        </div>
+      </div>
+
+      <div class="col-4">
+        <div class="card">
+          <h3>Housekeeping & Requests</h3>
+          <p>Guests can request cleaning, towels, amenities, and more in seconds.</p>
+          <span class="badge">Included</span>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="card">
+          <h3>Food & Beverages</h3>
+          <p>Order room service or lobby pickup with notes and quantities.</p>
+          <span class="badge">Included</span>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="card">
+          <h3>Maintenance</h3>
+          <p>Report issues and route to the right team instantly.</p>
+          <span class="badge">Included</span>
+        </div>
+      </div>
+
+      <div class="col-4">
+        <div class="card">
+          <h3>Front Desk</h3>
+          <p>Requests like late checkout, luggage help, and wake-up calls.</p>
+          <span class="badge">Included</span>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="card">
+          <h3>Navigation</h3>
+          <p>Wayfinding and directions to hotel amenities and local spots.</p>
+          <span class="badge">Included</span>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="card">
+          <h3>Feedback & Forms</h3>
+          <p>Collect ratings, comments, and incident forms with ease.</p>
+          <span class="badge">Included</span>
+        </div>
+      </div>
+
+      <div class="col-12">
+        <div class="card" style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;">
+          <div>
+            <h3>Simple Pricing</h3>
+            <p class="desc">Subscription: <strong>$499</strong> per property</p>
+          </div>
+          <div>
+            <a class="btn primary" href="/qr.html">Create Your QR</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="grid">
+        <div class="col-6">
+          <div class="card">
+            <h3>How it works</h3>
+            <ol>
+              <li>Generate a property QR code.</li>
+              <li>Place QR in rooms and common areas.</li>
+              <li>Guests scan to open the guest app.</li>
+              <li>Requests appear in your dashboard.</li>
+            </ol>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="card">
+            <h3>Links</h3>
+            <p><a href="/guest.html">Guest App</a> • <a href="/dashboard.html">Manager Dashboard</a> • <a href="/qr.html">QR Generator</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container">
+    <div>© <span data-year></span> QR CONCIERGE</div>
+  </footer>
+
+  <script type="module">
+    document.querySelector('[data-year]').textContent = String(new Date().getFullYear());
+  </script>
+</body>
+</html>
