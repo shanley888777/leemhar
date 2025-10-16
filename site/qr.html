@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>QR CONCIERGE — QR Generator</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/qrious@4.0.2/dist/qrious.min.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:16px;">
+      <div class="brand">
+        <div class="logo">QR</div>
+        <div class="title">QR CONCIERGE</div>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="guest.html">Guest App</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="qr.html">QR Generator</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Generate QR Code</h1>
+      <p class="desc">Create a QR that opens the guest app with property, room, and guest prefilled.</p>
+    </section>
+
+    <div class="grid">
+      <div class="col-6">
+        <div class="card">
+          <label>Guest app URL</label>
+          <input id="base-url" placeholder="https://your-domain/guest.html" />
+
+          <label>Property name</label>
+          <input id="property" value="Your Hotel" />
+
+          <div class="grid">
+            <div class="col-6">
+              <label>Room</label>
+              <input id="room" placeholder="e.g. 1205" />
+            </div>
+            <div class="col-6">
+              <label>Guest name</label>
+              <input id="guest" placeholder="Optional" />
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button class="btn primary" id="download">Download PNG</button>
+            <span class="helper">Preview updates as you type.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6">
+        <div class="card" style="text-align:center">
+          <canvas id="qr-canvas" width="256" height="256"></canvas>
+          <p id="link-preview" class="helper" style="word-break:break-all;margin-top:8px"></p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div class="toast"></div>
+  <script type="module" src="js/qr.js"></script>
+</body>
+</html>

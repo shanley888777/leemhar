@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>QR CONCIERGE — Guest</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:16px;">
+      <div class="brand">
+        <div class="logo">QR</div>
+        <div class="title">QR CONCIERGE</div>
+      </div>
+      <nav>
+        <a href="/index.html">Home</a>
+        <a href="/guest.html">Guest App</a>
+        <a href="/dashboard.html">Dashboard</a>
+        <a href="/qr.html">QR Generator</a>
+      </nav>
+    </div>
+  </header>
+  <main class="container">
+    <section class="hero">
+      <h1>Welcome to <span data-property>QR CONCIERGE</span></h1>
+      <p class="desc">Submit requests for your stay. Enter your room and name so we can assist you quickly.</p>
+    </section>
+
+    <div class="grid">
+      <div class="col-6">
+        <div class="card">
+          <h3>Housekeeping & Requests</h3>
+          <form id="hk-form">
+            <label>Room</label>
+            <input name="room" required placeholder="e.g. 1205" />
+            <label>Name</label>
+            <input name="guestName" placeholder="Optional" />
+            <label>Request</label>
+            <select name="requestType">
+              <option>Cleaning</option>
+              <option>Towels</option>
+              <option>Amenities</option>
+              <option>Trash pickup</option>
+            </select>
+            <label>Notes</label>
+            <textarea name="notes" rows="2" placeholder="Any details"></textarea>
+            <div class="form-actions">
+              <button class="btn primary" type="submit">Send request</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="col-6">
+        <div class="card">
+          <h3>Food & Beverages</h3>
+          <form id="fnb-form">
+            <label>Room</label>
+            <input name="room" required />
+            <label>Name</label>
+            <input name="guestName" placeholder="Optional" />
+            <label>Item</label>
+            <input name="item" placeholder="e.g. Club Sandwich" required />
+            <label>Quantity</label>
+            <input type="number" name="quantity" value="1" min="1" />
+            <label>Notes</label>
+            <textarea name="notes" rows="2" placeholder="No mayo, etc."></textarea>
+            <div class="form-actions">
+              <button class="btn primary" type="submit">Order</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="col-6">
+        <div class="card">
+          <h3>Maintenance</h3>
+          <form id="mnt-form">
+            <label>Room</label>
+            <input name="room" required />
+            <label>Name</label>
+            <input name="guestName" placeholder="Optional" />
+            <label>Issue</label>
+            <select name="issueType">
+              <option>AC</option>
+              <option>Plumbing</option>
+              <option>Lighting</option>
+              <option>TV/Internet</option>
+            </select>
+            <label>Notes</label>
+            <textarea name="notes" rows="2"></textarea>
+            <div class="form-actions">
+              <button class="btn primary" type="submit">Report issue</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="col-6">
+        <div class="card">
+          <h3>Front Desk</h3>
+          <form id="fd-form">
+            <label>Room</label>
+            <input name="room" required />
+            <label>Name</label>
+            <input name="guestName" placeholder="Optional" />
+            <label>Request</label>
+            <select name="requestType">
+              <option>Late checkout</option>
+              <option>Wake-up call</option>
+              <option>Luggage assistance</option>
+              <option>Valet</option>
+            </select>
+            <label>Notes</label>
+            <textarea name="notes" rows="2"></textarea>
+            <div class="form-actions">
+              <button class="btn primary" type="submit">Send to front desk</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="col-6">
+        <div class="card">
+          <h3>Navigation</h3>
+          <form id="nav-form">
+            <label>Room</label>
+            <input name="room" required />
+            <label>Name</label>
+            <input name="guestName" placeholder="Optional" />
+            <label>Destination</label>
+            <select name="destination">
+              <option>Lobby</option>
+              <option>Gym</option>
+              <option>Pool</option>
+              <option>Restaurant</option>
+              <option>Spa</option>
+            </select>
+            <div class="form-actions">
+              <button class="btn primary" type="submit">Get directions</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="col-6">
+        <div class="card">
+          <h3>Feedback & Forms</h3>
+          <form id="fb-form">
+            <label>Room</label>
+            <input name="room" required />
+            <label>Name</label>
+            <input name="guestName" placeholder="Optional" />
+            <label>Rating</label>
+            <select name="rating">
+              <option value="5">5 - Excellent</option>
+              <option value="4">4 - Good</option>
+              <option value="3">3 - Average</option>
+              <option value="2">2 - Poor</option>
+              <option value="1">1 - Very poor</option>
+            </select>
+            <label>Comments</label>
+            <textarea name="message" rows="3" placeholder="Share your thoughts"></textarea>
+            <div class="form-actions">
+              <button class="btn primary" type="submit">Send feedback</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="col-12">
+        <div class="card">
+          <h3>My Requests</h3>
+          <div id="my-requests"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div class="toast"></div>
+  <script type="module" src="/js/guest.js"></script>
+</body>
+</html>

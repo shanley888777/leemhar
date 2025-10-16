@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>QR CONCIERGE — Dashboard</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:16px;">
+      <div class="brand">
+        <div class="logo">QR</div>
+        <div class="title">QR CONCIERGE</div>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="guest.html">Guest App</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="qr.html">QR Generator</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Manager Dashboard</h1>
+      <p class="desc">View, filter, and update guest requests submitted via QR CONCIERGE.</p>
+    </section>
+
+    <section class="section">
+      <div class="kpis">
+        <div class="kpi"><div class="value" id="kpi-total">0</div><div class="label">Total</div></div>
+        <div class="kpi"><div class="value" id="kpi-new">0</div><div class="label">New</div></div>
+        <div class="kpi"><div class="value" id="kpi-inp">0</div><div class="label">In progress</div></div>
+        <div class="kpi"><div class="value" id="kpi-done">0</div><div class="label">Completed</div></div>
+        <div class="kpi"><div class="value" id="kpi-canc">0</div><div class="label">Cancelled</div></div>
+      </div>
+    </section>
+
+    <section class="section card">
+      <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;">
+        <input id="search" placeholder="Search by summary, room, or name" style="flex:1 1 300px" />
+        <select id="filter-service">
+          <option value="all">All services</option>
+          <option value="housekeeping">Housekeeping & Requests</option>
+          <option value="fnb">Food & Beverages</option>
+          <option value="maintenance">Maintenance</option>
+          <option value="frontdesk">Front Desk</option>
+          <option value="navigation">Navigation</option>
+          <option value="feedback">Feedback & Forms</option>
+        </select>
+        <select id="filter-status">
+          <option value="all">All statuses</option>
+          <option value="new">New</option>
+          <option value="in_progress">In progress</option>
+          <option value="completed">Completed</option>
+          <option value="cancelled">Cancelled</option>
+        </select>
+        <button class="btn ghost" id="export">Export CSV</button>
+        <button class="btn danger" id="clear-all">Clear all</button>
+        <button class="btn ghost" id="seed-demo">Seed demo</button>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="card">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>When</th>
+              <th>Room</th>
+              <th>Guest</th>
+              <th>Service</th>
+              <th>Summary</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="req-tbody"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <div class="toast"></div>
+  <script type="module" src="js/dashboard.js"></script>
+</body>
+</html>
